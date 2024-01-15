@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/favicon.ico" alt="logo">
+      </div>
+      <div>
+        Guess
+        <span class="mystery">?</span>
+        Number
+        <br />
+        <p>Guess between <span id="guessBetween"></span></p>
+      </div>
+    </header>
+
+    <main>
+      <div class="main">
+        <div class="main-input">
+          <span class="label">Guess the number 🤔</span>
+          <input
+          type="number"
+          name="input-number"
+          id="input-number"
+          title="Enter a number"
+          placeholder="Guess the number 🤔"
+          />
+        </div>
+        <button id="check" onclick="verify()">Check!</button>
+      </div>
+
+      <div class="message" id="message">Start Guessing...</div>
+
+      <button id="guessAnother" onclick="guessNumber()">
+        💻 Guess Another Number
+      </button>
+
+      <button id="settings" onclick="showModel()">Settings</button>
+      
+    </main>
+    <div class="settings" id="modal">
+      <form>
+        <!-- <label for="minGuess">Minimum Number: </label><br> -->
+        <input
+          type="number"
+          name="minGuess"
+          id="minGuess"
+          title="Enter a number"
+          placeholder="Minimum Number to Guess:"
+        />
+          <br />
+        <!-- <label for="maxGuess">Maximum Number: </label><br> -->
+        <input
+          type="number"
+          name="maxGuess"
+          id="maxGuess"
+          title="Enter a number"
+          placeholder="Maximum Number to Guess"
+        />
+          <br />
+        <!-- <label for="attempts">Attempts: </label><br> -->
+        <input
+          type="number"
+          name="attempts"
+          id="attempts"
+          title="Enter a number"
+          placeholder="Number of Attempts"
+        />
+        <br />
+        <button type="button" onclick="initializeValues()">Save</button>
+        <br>
+        <button type="button" onclick="closeModel()">Close</button>
+      </form>
+    </div>
+    <footer>
+      <p class="attempts-remaining">Attempts Remaining: <span id="attempts-remaining"></span></p>
+      <br />
+      <p class="highScore">High Score: <span id="highScore"></span></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

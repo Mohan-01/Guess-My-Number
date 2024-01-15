@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(29, 29, 29);
+  color: aliceblue;
+  /* z-index: -1; */
+  /* position: relative; */
+}
+
+header {
+  text-align: center;
+  font-size: 4em;
+  width: 100%;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  justify-content: center;
+  margin-left: 2em;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.mystery {
+  border: 1px solid white;
+  padding: .1em .2em;
+}
+
+header p {
+  float: right;
+  font-size: .5em;
+  padding: 0 2em;
+  z-index: 10;
+}
+
+.main {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: max-content;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+
+.main-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  height: max-content;
+  padding: 1em;
+}
+
+.label {
+  font-size: 1.2em;
+  letter-spacing: .07em;
+  margin-bottom: 1em;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid white;
+  /* box-shadow: 0 0 4px white; */
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: .5em;
+  width: max-content;
+}
+
+#check {
+  margin-top: 3.5em;
+  border: 2px solid violet;
+}
+
+.message {
+  font-size: 2em;
+  color: greenyellow;
+  width: max-content;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  margin-top: 2em;
+}
+
+button {
+  font-size: 1.5em;
+  padding: .5em 1em;
+  border-radius: .5em;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 0 4px white;
+}
+
+button:hover {
+  background-color: violet;
+  color: #000;
+  box-shadow: 0 0 8px white;
+}
+
+#guessAnother {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 500px) {
+  #guessAnother {
+    top: 1em;
+    right: 1em;
+    left: unset;
+    bottom: unset;
+  }
+}
+
+#settings {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 1.2em;
+}
+
+.settings {
+  position: absolute;
+  /* display: flex; */
+  flex-direction: column;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  margin: 0;
+  /* padding: 22%; */
+  top: 0;
+}
+
+.settings input {
+  margin-bottom: 2em;
+}
+
+button {
+  width: max-content;
+}
+
+label {
+  font-size: 1.2em;
+  margin: 4em 1em;
+}
+
+footer {
+  position: absolute;
+  right: 4em;
+  bottom: 1em;
+  font-size: 2em;
+}
+
+footer .attempts-remaining,
+footer .attempts-remaining span {
+  color: yellow;
+}
+
+footer .highScore,
+footer .highScore span {
+  color: red;
+}
