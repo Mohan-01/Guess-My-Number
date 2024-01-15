@@ -60,9 +60,10 @@ function updateScores() {
     }
     highScore = Math.max(score, highScore);
     window.sessionStorage.setItem('highScore', highScore);
-    alert(
+    displayScores();
+    setTimeout(alert(
       'To restart guessing, you should click guess another number first🤖'
-    );
+    ), 0);
   }, 0);
 }
 
