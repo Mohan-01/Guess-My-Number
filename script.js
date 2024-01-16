@@ -23,8 +23,8 @@ function initializeValues() {
   maxGuessNumber = Number(document.getElementById('maxGuess').value) || maxGuessNumber || 50;
   attempts = Number(document.getElementById('attempts').value) || initialAttempts || 5;
 
-  minGuessNumber = Math.min(minGuessNumber, 1);
-  attempts = Math.min(attempts, 1);
+  minGuessNumber = Math.max(minGuessNumber, 1);
+  attempts = Math.max(attempts, 1);
 
   initialAttempts = attempts;
   
