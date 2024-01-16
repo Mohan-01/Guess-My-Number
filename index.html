@@ -47,6 +47,13 @@
       
     </main>
     <div class="settings" id="modal">
+      <div class="note">
+        <h3>Note: </h3>
+        <ul>
+          <li>minimum number to guess should be greater than 1</li>
+          <li>minimum number of attempts should be atleast 1</li>
+        </ul>
+      </div>
       <form>
         <!-- <label for="minGuess">Minimum Number: </label><br> -->
         <input
@@ -74,6 +81,7 @@
           id="attempts"
           title="Enter a number"
           placeholder="Number of Attempts"
+          min="1"
         />
         <br />
         <button type="button" onclick="initializeValues()">Save</button>

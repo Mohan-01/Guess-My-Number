@@ -6,6 +6,7 @@
   color: aliceblue;
   /* z-index: -1; */
   /* position: relative; */
+  font-family: 'roboto', sans-serif;
 }
 
 header {
@@ -149,6 +150,30 @@ button:hover {
 
 .settings input {
   margin-bottom: 2em;
+}
+
+.note {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.note h3 {
+  color: red;
+  border-bottom: 1px solid white;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  padding: 1em 2em;
+}
+
+.note ul {
+  list-style: "*";
+}
+
+.note ul > li {
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  color: rgb(255, 116, 116);
 }
 
 button {
