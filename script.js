@@ -22,6 +22,10 @@ function initializeValues() {
   minGuessNumber = Number(document.getElementById('minGuess').value) || minGuessNumber || 1;
   maxGuessNumber = Number(document.getElementById('maxGuess').value) || maxGuessNumber || 50;
   attempts = Number(document.getElementById('attempts').value) || initialAttempts || 5;
+
+  minGuessNumber = max(minGuessNumber, 1);
+  attempts = max(attempts, 1);
+  
   initialAttempts = attempts;
   
   attemptsRemaining = document.getElementById('attempts-remaining');
