@@ -106,7 +106,6 @@ function verify() {
 }
 
 function showModel() {
-  console.log('show model');
   document.getElementById('modal').style.display = 'flex';
 }
 
