@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess My Number</title>
     <link rel="stylesheet" href="style.css" />
-    
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="/favicon.ico" alt="logo">
+        <img src="/favicon.ico" alt="logo" />
       </div>
       <div>
         Guess
@@ -27,28 +26,22 @@
         <div class="main-input">
           <span class="label">Guess the number 🤔</span>
           <input
-          type="number"
-          name="input-number"
-          id="input-number"
-          title="Enter a number"
-          placeholder="Guess the number 🤔"
+            type="number"
+            name="input-number"
+            id="input-number"
+            title="Enter a number"
+            placeholder="Guess the number 🤔"
           />
         </div>
         <button id="check" onclick="verify()">Check!</button>
       </div>
 
       <div class="message" id="message">Start Guessing...</div>
-
-      <button id="guessAnother" onclick="guessNumber()">
-        💻 Guess Another Number
-      </button>
-
       <button id="settings" onclick="showModel()">Settings</button>
-      
     </main>
     <div class="settings" id="modal">
       <div class="note">
-        <h3>Note: </h3>
+        <h3>Note:</h3>
         <ul>
           <li>minimum number to guess should be greater than 1</li>
           <li>minimum number of attempts should be atleast 1</li>
@@ -64,7 +57,7 @@
           placeholder="Minimum Number to Guess:"
           min="1"
         />
-          <br />
+        <br />
         <!-- <label for="maxGuess">Maximum Number: </label><br> -->
         <input
           type="number"
@@ -73,7 +66,7 @@
           title="Enter a number"
           placeholder="Maximum Number to Guess"
         />
-          <br />
+        <br />
         <!-- <label for="attempts">Attempts: </label><br> -->
         <input
           type="number"
@@ -85,14 +78,23 @@
         />
         <br />
         <button type="button" onclick="initializeValues()">Save</button>
-        <br>
+        <br />
         <button type="button" onclick="closeModel()">Close</button>
       </form>
     </div>
     <footer>
-      <p class="attempts-remaining">Attempts Remaining: <span id="attempts-remaining"></span></p>
-      <br />
-      <p class="highScore">High Score: <span id="highScore"></span></p>
+      <div class="guess-btn">
+        <button id="guessAnother" onclick="guessNumber()">
+          💻 Guess Another Number
+        </button>
+      </div>
+      <div class="scores">
+        <p class="attempts-remaining">
+          Attempts Remaining: <span id="attempts-remaining"></span>
+        </p>
+        <br />
+        <p class="highScore">High Score: <span id="highScore"></span></p>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
